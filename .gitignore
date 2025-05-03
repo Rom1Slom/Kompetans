@@ -1,0 +1,32 @@
+# Ignorer l'environnement virtuel
+venv/
+.env/
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# Fichiers Python compilés
+*.pyc
+*.pyo
+__pycache__/
+
+# Fichiers de configuration locaux
+*.env
+*.sqlite3
+db.sqlite3
+
+# Fichiers générés par l'IDE
+.vscode/
+.idea/
+
+# Fichiers statiques générés
+staticfiles/
+media/
+
+# Logs
+*.log
+
+# Autres fichiers temporaires
+.DS_Store
+Thumbs.db

@@ -1,0 +1,67 @@
+{% extends 'monsite/base.html' %}
+
+{% load static %} <!-- Déplace la balise load au début du fichier -->
+{% block content %}
+<div class="container mt-5">
+     <!-- Bandeau de présentation des services -->
+     <div class="jumbotron bg-secondary text-white">
+        <h1 class="display-4">Bienvenue chez Kompetans</h1>
+        <p class="lead">Nous offrons une gamme complète de services pour assurer la sécurité et la conformité de vos installations électriques.</p>
+        <hr class="my-4">
+        <p>Nos services incluent les habilitations électriques, les contrôles de conformité, et bien plus encore.</p>
+    </div>
+    <div class="row">
+        <!-- Encadré Habilitations électriques -->
+        <div class="col-md-6 col-12 mb-4">
+            <div class="card h-70 border-dark">
+                <a href="{% url 'monsite:contact_form' 'pour une habilitation' %}" class="stretched-link"></a>
+                <img src="{% static 'images/habilitation2.jpg' %}" class="card-img-top" alt="Habilitations électriques">
+                <div class="card-body">
+                    <h4 class="card-title">Habilitations électriques</h4>
+                    <p class="card-text">Obtenez votre habilitation pour travailler en sécurité sur les installations électriques.</p>
+                    <a href="{% url 'monsite:contact_form' 'pour une habilitation' %}" class="btn btn-primary">Demander un contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Encadré Contrôle de conformité -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-70 border-dark">
+                <a href="{% url 'monsite:contact_form' 'pour une action de médiation' %}" class="stretched-link"></a>
+                <img src="{% static 'images/conformite.jpg' %}" class="card-img-top" alt="Contrôle de conformité">
+                <div class="card-body">
+                    <h5 class="card-title">Action de médiation</h5>
+                    <p class="card-text">Faites appel à un médiateur des entreprises.</p>
+                    <a href="{% url 'monsite:contact_form' 'pour un contrôle de conformité' %}" class="btn btn-primary">Demander un contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Encadré formation de formateur -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-70 border-dark">
+                <a href="{% url 'monsite:contact_form' 'pour une formation de formateur' %}" class="stretched-link"></a>
+                <img src="{% static 'images/formateur.jpg' %}" class="card-img-top" alt="Contrôle de conformité">
+                <div class="card-body">
+                    <h5 class="card-title">Formation de formateur en habilitations électriques</h5>
+                    <p class="card-text">Devenez formateur en habilitation électrique.</p>
+                    <a href="{% url 'monsite:contact_form' 'pour une formation de formateur' %}" class="btn btn-primary">Demander un contact</a>
+                </div>
+            </div>
+        </div>
+
+         <!-- Encadré formation NF C15-100 -->
+         <div class="col-md-6 mb-4">
+            <div class="card h-70 border-dark">
+                <a href="{% url 'monsite:contact_form' 'pour une formation NF C15-100' %}" class="stretched-link"></a>
+                <img src="{% static 'images/formateur.jpg' %}" class="card-img-top" alt="Contrôle de conformité">
+                <div class="card-body">
+                    <h5 class="card-title">Formation à la norme NF C15-100</h5>
+                    <p class="card-text">Formez-vous à la NF C15-100. Vous êtes artisan, chargé d'affaires ou en bureau d'études.</p>
+                    <a href="{% url 'monsite:contact_form' 'pour une formation NF C15-100' %}" class="btn btn-primary">Demander un contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'monsite/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1>Nos Services</h1>
+
+    <div class="service mb-4">
+        <h2>1. Les habilitations électriques</h2>
+        <p>Nous offrons des formations complètes pour obtenir les habilitations électriques nécessaires pour travailler en toute sécurité sur des installations électriques. Nos formations couvrent les aspects théoriques et pratiques pour garantir une compréhension approfondie des procédures de sécurité.</p>
+        <a href="{% url 'monsite:blog' %}?tag=Habilitation électrique" class="btn btn-primary">Voir les articles</a>
+    </div>
+    <hr>
+
+    <div class="service mb-4">
+        <h2>2. La formation de formateur en habilitations électriques</h2>
+        <p>Devenez formateur en habilitations électriques grâce à notre programme spécialisé. Cette formation est conçue pour les professionnels souhaitant transmettre leurs connaissances et compétences en matière de sécurité électrique à d'autres travailleurs.</p>
+        <a href="{% url 'monsite:blog' %}?tag=Habilitation électrique" class="btn btn-primary">Voir les articles</a>
+    </div>
+    <hr>
+
+    <div class="service mb-4">
+        <h2>3. Les formations à la C15-100</h2>
+        <p>Nos formations à la norme NF C15-100 vous permettent de maîtriser les exigences réglementaires pour les installations électriques basse tension en France. Apprenez à concevoir, installer et vérifier des installations conformes à cette norme.</p>
+        <a href="{% url 'monsite:blog' %}?tag=Normes des installations électriques" class="btn btn-primary">Voir les articles</a>
+    </div>
+    <hr>
+
+    <div class="service mb-4">
+        <h2>4. Les formations à la gestion des conflits en entreprise</h2>
+        <a href="{% url 'monsite:blog' %}?tag=Médiation" class="btn btn-primary">Voir les articles</a>
+    </div>
+    <hr>
+</div>
+{% endblock %}

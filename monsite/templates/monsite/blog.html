@@ -1,0 +1,26 @@
+{% extends 'monsite/base.html' %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Blog</h1>
+    <div class="mb-3">
+        <a href="{% url 'monsite:blog' %}" class="btn btn-secondary {% if not selected_tag %}active{% endif %}">Tous les articles</a>
+        <a href="{% url 'monsite:blog' %}?tag=Médiation" class="btn btn-secondary {% if selected_tag == 'Médiation' %}active{% endif %}">Médiation</a>
+        <a href="{% url 'monsite:blog' %}?tag=Habilitation électrique" class="btn btn-secondary {% if selected_tag == 'Habilitation électrique' %}active{% endif %}">Habilitation électrique</a>
+        <a href="{% url 'monsite:blog' %}?tag=Normes des installations électriques" class="btn btn-secondary {% if selected_tag == 'Normes des installations électriques' %}active{% endif %}">Normes des installations électriques</a>
+    </div>
+    {% for article in articles %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">{{ article.titre }}</h3>
+                <h6 class="text-muted">{{ article.date_publication|date:"d F Y" }}</h6>
+                <p class="card-text">{{ article.contenu }}</p>
+                <p class="'card-text"><small class="text-muted">Tag:{{ article.tag }}</small></p>
+            </div>
+        </div>
+    {% empty %}
+        <p>Aucun article disponible.</p>
+    {% endfor %}
+</div>
+{% endblock %}

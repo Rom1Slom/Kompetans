@@ -1,0 +1,29 @@
+{% extends 'monsite/base.html' %}
+
+{% block content %}
+<h2>Messages reçus</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Entreprise</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Message</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg.nom }}</td>
+            <td>{{ msg.entreprise|default:"Non précisé" }}</td>
+            <td>{{ msg.email|default:"Non précisé" }}</td>
+            <td>{{ msg.telephone|default:"Non précisé" }}</td>
+            <td>{{ msg.message }}</td>
+            <td>{{ msg.date_created }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
